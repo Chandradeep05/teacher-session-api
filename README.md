@@ -215,7 +215,7 @@ This eliminates race conditions without requiring multi-document transactions.
 
 ## Testing & Verification
 
-The project is fully verified through a rigorous test suite and a Postman collection covering:
+The project is fully verified through both a headless Postman collection and a local programmatic integration test suite covering:
 
 * **Health & Route Checks**
 * **Full Lifecycle Operations** (Create → Available → Book → Complete → History)
@@ -224,9 +224,10 @@ The project is fully verified through a rigorous test suite and a Postman collec
 * **Atomic Concurrency Protection** (Ensuring a session cannot be double-booked)
 * **Centralized Error Envelope Consistency**
 
-### Verification Badges
+### Verification Metrics
 
-* **Tests Passed:** ✅ 66/66 passed, 0 failed
+* **Postman Collection:** ✅ 34/34 assertions passed (across 23 endpoints/flows)
+* **Local Integration Suite:** ✅ 66/66 assertions passed (including millisecond concurrency race tests)
 * **TypeScript Compilation:** ✅ Clean (`tsc` emits cleanly, zero compiler warnings/errors)
 * **Booking Race Protection:** ✅ Verified (concurrency safe)
 * **MongoDB Aggregations:** ✅ Verified (correct UTC boundaries and `$facet` splits)
