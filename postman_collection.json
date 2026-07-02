@@ -495,7 +495,7 @@
           ],
           "request": {
             "method": "GET",
-            "url": "http://localhost:3000/health"
+            "url": "https://teacher-session-api.onrender.com/health"
           }
         },
         {
